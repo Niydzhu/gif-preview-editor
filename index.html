@@ -35,6 +35,25 @@
         <link rel="stylesheet" href="./style/bubble.css" />
 
 		<!-- Scripts -->
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', function () {
+                    navigator.serviceWorker.register('service-worker.js').then(
+                        function (registration) {
+                            // Registration was successful
+                            //console.log('Registered!');
+                        },
+                        function (err) {
+                            // Registration failed
+                            //console.log('ServiceWorker registration failed: ', err);
+                        }
+                    ).catch(err => console.log(err));
+                });
+            }
+            else 
+                console.log('Service worker is not supported');
+        </script>
+        <script defer src="./service-worker.js"></script>
 		<script type="module" src="./modules/GIFUtils.js"></script>
         <script type="module" src="./modules/Bubble.js"></script>
 		<script defer src="./main.js"></script>
