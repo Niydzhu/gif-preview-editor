@@ -92,7 +92,7 @@ document.querySelector('#import-gif').addEventListener('change', function () {
             const dataURL = await blobToDataURL(file.blob);
 
             // If the device used isn't a mobile device + Limits the number of bubbles
-            if (!isMobile() && i % Math.floor(processedFiles.length / 30) === 0) {
+            if (!isMobile() && i % Math.ceil(processedFiles.length / 30) === 0) {
                 // Create a bubble with the frame
                 setTimeout(() => {
                     requestAnimationFrame(async () => new Bubble(document.querySelector('body'), dataURL));
