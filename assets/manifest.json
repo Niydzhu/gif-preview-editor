@@ -1,11 +1,11 @@
 {
     "short_name": "GIF Preview Editor",
-    "name": "GIF Prev.",
+    "name": "GIF Preview Editor",
     "lang": "en",
     "description": "Tool for editing the starting image of a GIF (Preview image). ",
     "start_url": "/gif-preview-editor/",
-    "background_color": "#000000",
-    "theme_color": "#ff6a88",
+    "background_color": "#ff6a88",
+    "theme_color": "#ffffff",
     "display": "standalone",
     "icons": [
         {
