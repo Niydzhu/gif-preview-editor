@@ -1,0 +1,17 @@
+.bubble {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	border: 10% solid #ff6a88;
+	cursor: pointer;
+	transition: linear 2s, transform 0.5s;
+}
+
+.bubble:hover {
+	transform: scale(1.7);
+}
+
+.bubble-burst {
+	transform: scale(1.5);
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Tool for editing the starting image of a GIF (Preview image). ">
+
+		<title>GIF Preview Editor</title>
+
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="assets/favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="manifest" href="assets/manifest.json">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="57x57" href="assets/favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="assets/favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="assets/favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="assets/favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="assets/favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="assets/favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="assets/favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="assets/favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="assets/favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
+		<link rel="stylesheet" href="./style/main.css" />
+        <link rel="stylesheet" href="./style/commands.css" />
+        <link rel="stylesheet" href="./style/frames.css" />
+        <link rel="stylesheet" href="./style/bubble.css" />
+
+		<!-- Scripts -->
+		<script type="module" src="./modules/GIFUtils.js"></script>
+        <script type="module" src="./modules/Bubble.js"></script>
+		<script defer src="./main.js"></script>
+	</head>
+    
+	<body>
+        <div id="downloading-screen">
+            <div id="downloading-text">
+                <h3>Downloading</h3>
+                <p>
+                    Your GIF is being created.
+                    The download will start soon.
+                </p>
+            </div>
+        </div>
+
+        <main>
+            <section id="commands-section">
+                <div id="gif-preview-container">
+                    <div id="gif-preview">
+                        <div id="gif-preview-placeholder">
+                            <span class="material-icons-outlined">broken_image</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="commands">
+                    <input id="import-gif" type="file">
+                    <label for="import-gif">
+                        <span class="material-icons-outlined">add_photo_alternate</span>
+                        Import your GIF !
+                    </label>
+                    
+                    <button id="download-updated">
+                        <span class="material-icons-outlined">file_download</span>
+                        Download updated
+                    </button>
+                </div>
+            </section>
+
+            <section id="frames-section">
+                <h2>Frames</h2>
+
+                <div id="frames"></div>
+
+                <div id="frames-placeholder">
+                    <div class="loader"></div>
+                    <p>
+                        <span class="material-icons-outlined">highlight_off</span>
+                        No frames to display. 
+                    </p>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

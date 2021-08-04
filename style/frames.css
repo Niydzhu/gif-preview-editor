@@ -1,0 +1,134 @@
+/* ------------------------------------------------------------------------- */
+/*                          Frames Section Elements                          */
+/* ------------------------------------------------------------------------- */
+
+section#frames-section {
+	flex: 2;
+
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background: rgba(255, 255, 255, 0.3);
+
+	display: flex;
+	flex-direction: column;
+}
+
+#frames-section h2 {
+	display: none;
+	margin: 15px 0 15px 25px;
+	font-size: min(5rem, 5vw);
+	letter-spacing: 2px;
+}
+
+#frames {
+	height: auto;
+
+	column-gap: 25px;
+	grid-template-columns: repeat(auto-fit, 100px);
+	grid-template-rows: repeat(auto-fit, min-content);
+	justify-content: center;
+	place-items: center center;
+	row-gap: 25px;
+	margin-bottom: 25px;
+	margin-right: 10px;
+	padding: 15px;
+
+	display: none; /* Hidden by default, grid when visible */
+
+	overflow-y: scroll;
+}
+
+.frame {
+	max-height: 100px;
+	max-width: 100px;
+	border-radius: 10px;
+	cursor: pointer;
+
+	object-fit: contain;
+
+	animation: spin-scale-up 1s ease-in-out 1;
+	transition: transform 200ms, border 200ms;
+}
+
+@keyframes spin-scale-up {
+	0% {
+		transform: scale(0) rotate(-360deg);
+	}
+	100% {
+		transform: scale(1) rotate(360deg);
+	}
+}
+
+.frame:active {
+	transform: scale(0.9);
+}
+
+.frame:hover:not(.frame-selected):not(:active) {
+	transform: scale(1.1);
+}
+
+.frame-selected {
+	border: 5px solid var(--pink);
+	transform: scale(1.2);
+	border-radius: 15px;
+	padding: 2px;
+}
+
+#frames-placeholder {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#frames-placeholder p {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: min(2rem, 2vw);
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#frames-placeholder p .material-icons-outlined {
+	margin-bottom: 10px;
+	font-size: min(50px, 5vw);
+}
+
+/* ------------------------------------------------------------------------- */
+/*                            Mobile Media Query                             */
+/* ------------------------------------------------------------------------- */
+
+@media screen and (max-width: 750px) {
+	section#frames-section {
+		height: 66%;
+		border-radius: 0 0 20px 20px;
+	}
+
+	#frames-section h2 {
+		font-size: min(5rem, 8vw);
+	}
+
+	#frames {
+		grid-template-columns: repeat(auto-fit, 75px);
+	}
+
+	.frame {
+		max-height: 75px;
+		max-width: 75px;
+	}
+
+	#frames-placeholder p {
+		font-size: min(2rem, 4vw);
+	}
+
+	#frames-placeholder p .material-icons-outlined {
+		font-size: min(50px, 8vw);
+	}
+}

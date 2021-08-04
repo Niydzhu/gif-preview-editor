@@ -1,0 +1,172 @@
+/* ------------------------------------------------------------------------- */
+/*                                  Imports                                  */
+/* ------------------------------------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+
+/* ------------------------------------------------------------------------- */
+/*                              Global Elements                              */
+/* ------------------------------------------------------------------------- */
+
+:root {
+	--pink: #ff6a88;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+
+	overflow: hidden;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: #ffdee9;
+	background-image: linear-gradient(90deg, #ffdee9 0%, #b5fffc 100%);
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* The scrollbar */
+
+::-webkit-scrollbar {
+	height: 10px;
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 9999px;
+	background: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #888;
+}
+
+* {
+	/* No selection highlight */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: transparent;
+}
+
+h2 {
+	font-family: "Lexend", sans-serif;
+	font-weight: 700;
+	margin: 0;
+}
+
+img {
+	-webkit-user-drag: none;
+}
+
+main {
+	height: 80%;
+	width: 80%;
+	max-width: 1200px;
+
+	display: flex;
+	flex-direction: row;
+
+	border-radius: 20px;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
+
+	z-index: 10;
+}
+
+#downloading-screen {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	background-color: #00000080;
+	z-index: 20;
+
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+
+	display: none; /* Hidden by default, flex when visible */
+	align-items: center;
+	justify-content: center;
+}
+
+#downloading-text {
+	font-family: "Lexend", sans-serif;
+	padding: 50px;
+	color: #fff;
+
+	z-index: 21;
+}
+
+#downloading-text h3 {
+	font-weight: 600;
+	font-size: min(6rem, 8vw);
+	margin: 0 0 10px 0;
+}
+
+#downloading-text p {
+	font-weight: 300;
+	font-size: min(2.5rem, 3vw);
+	margin: 0;
+}
+
+.loader {
+	display: none; /* Hidden by default */
+	border: 10px solid #fdfdfd;
+	border-top: 10px solid var(--pink);
+	border-radius: 50%;
+	width: min(8rem, 8vw);
+	height: min(8rem, 8vw);
+	animation: spin 1s ease-in-out infinite;
+	margin-bottom: 10px;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/* ------------------------------------------------------------------------- */
+/*                            Mobile Media Query                             */
+/* ------------------------------------------------------------------------- */
+
+@media screen and (max-width: 750px) {
+	main {
+		height: 95%;
+		width: 90%;
+		flex-direction: column;
+	}
+
+	.loader {
+		border: 6px solid #fdfdfd;
+		border-top: 6px solid var(--pink);
+	}
+}
