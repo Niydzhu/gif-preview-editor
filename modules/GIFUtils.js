@@ -1,6 +1,6 @@
-// Imagemagick library
-import * as Magick from 'https://knicknic.github.io/wasm-imagemagick/magickApi.js';
-////import * as Magick from '../lib/wasm-imagemagick/magickApi.js';
+// Imagemagick library (WebAssembly)
+////import * as Magick from 'https://knicknic.github.io/wasm-imagemagick/magickApi.js';
+import * as Magick from '../lib/wasm-imagemagick/magickApi.js';
 
 // gif-info library (https://github.com/Prinzhorn/gif-info)
 import getInfo from '../lib/gif-info/gif-info.js';
