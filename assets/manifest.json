@@ -5,7 +5,7 @@
     "description": "Tool for editing the starting image of a GIF (Preview image). ",
     "start_url": "/gif-preview-editor/",
     "background_color": "#ffdee9",
-    "theme_color": "#ffffff",
+    "theme_color": "#ffdee9",
     "display": "standalone",
     "icons": [
         {
