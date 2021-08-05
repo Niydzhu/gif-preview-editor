@@ -10,10 +10,10 @@ isn't being animated.
 
 # Usage
 
-1. Import your GIF image with the "Import your GIF !" button.
-2. Wait for the application to extract all frames from your GIF. 
-3. Select your desired frame in the "Frames" section by clicking on it.
-4. When you've found the perfect frame, simply click on the "Download updated" button, and the download will start in no time !
+1. **Import your GIF** image with the `Import your GIF !` button.
+2. **Wait** for the application to extract all frames from your GIF. 
+3. **Select your desired frame** in the "Frames" section by clicking on it.
+4. When you've found the perfect frame, simply click on the `Download updated` button, and the download will start in no time !
 
 # PWA
 
