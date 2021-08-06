@@ -116,12 +116,12 @@ section#frames-section {
 	}
 
 	#frames {
-		grid-template-columns: repeat(auto-fit, 75px);
+		grid-template-columns: repeat(auto-fit, min(75px, 18vw));
 	}
 
 	.frame {
-		max-height: 75px;
-		max-width: 75px;
+		max-height: min(75px, 18vw);
+		max-width: min(75px, 18vw);
 	}
 
 	#frames-placeholder p {
